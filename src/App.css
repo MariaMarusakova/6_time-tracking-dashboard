@@ -1,10 +1,13 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div {
+  max-width: 600px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +16,16 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.activities{
+  display: table;
 }
 
-.App-link {
-  color: #61dafb;
+.activity-type{
+  display: table-row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.activity-detail{
+  display: table-cell;
 }
+
