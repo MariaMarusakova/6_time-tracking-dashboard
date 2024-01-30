@@ -23,7 +23,7 @@ const TimeTracker = (props) => {
               return <div className="icon" style={{backgroundColor: "var(--Lime-green)"}}><Exercise /></div>
             if (props.title === 'Play')
             return <div className="icon" style={{backgroundColor: "var(--Soft-blue)"}}><Play /></div>
-            if (props.title === 'SelfCare')
+            if (props.title === 'Self Care')
             return <div className="icon" style={{backgroundColor: "var(--Soft-orange)"}}><SelfCare /></div>
             if (props.title === 'Study')
             return <div className="icon" style={{backgroundColor: "var(--Light-red-study)"}}><Study /></div>

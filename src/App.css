@@ -185,3 +185,29 @@ padding-left: 150px;
 
 }
 
+.Exercise{
+  background-color: var(--Lime-green);
+
+}
+
+.Play{
+  background-color: var(--Soft-blue);
+
+}
+
+.Self{
+  background-color: var(--Soft-orange);
+
+}
+
+.Study{
+  background-color: var(--Light-red-study);
+
+}
+
+.Social{
+  background-color: var(--Violet);
+
+}
+
+
