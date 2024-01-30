@@ -50,7 +50,6 @@
     height: 500px;
     margin: auto;
     width: 250px;
-    background-color: var(--Violet);
   }
 }
 
@@ -62,19 +61,19 @@
   }
 
   body {
-    display: block;  
+    display: block;
   }
 
   .activities {
     height: 50%;
     width: 70%;
   }
+
   .activity-row {
-    display: block;   
+    display: block;
     height: 100%;
     width: 100%;
     margin: 15%;
-
     justify-content: space-between;
 
   }
@@ -84,7 +83,6 @@
     height: 50%;
     margin: 15%;
     width: 70%;
-    background-color: var(--Violet);
   }
 }
 
@@ -94,7 +92,7 @@ body {
   height: 100vh;
   font-size: 2rem;
   color: white;
-  background-color: var(--Very-dark-blue);  
+  background-color: var(--Very-dark-blue);
 }
 
 .activities {
@@ -110,13 +108,13 @@ body {
   flex: 1;
   border-radius: 15px;
   overflow: hidden;
-  perspective: 1px;  
+  perspective: 1px;
   margin: 15px;
 
 
 }
 
-.title{
+.title {
   border-radius: 15px 15px 0 0;
 
 }
@@ -125,7 +123,8 @@ body {
   background-color: var(--Dark-blue);
   height: 100%;
   width: 100%;
-
+  text-align: justify;
+  padding-left: 10%;
 }
 
 
@@ -135,7 +134,22 @@ body {
   background: none;
   margin: auto;
   padding: 15%;
+  border-radius: 15px;
+  background-color: var(--Violet);
 
+
+}
+
+.side-bar{
+  border-radius: 15px;
+  background-color: var(--Dark-blue);
+
+
+}
+
+.time-frame{
+  border-radius: 15px;
+  height: 30%;
 }
 
 .headshot {
@@ -152,62 +166,61 @@ p h2 {
 
 }
 
-.weekly{
+.weekly {
   display: none;
 }
 
-.monthly{
+.monthly {
   display: none;
 }
 
-.present{
-  font-size: large;
+.present {
+  font-size: 40px;
 }
 
-.title{
+.title {
   font-size: medium;
+  padding-top: 15%;
 }
 
-.past{
+.past {
   font-size: small;
 
 }
 
-.icon{
-height: 15%;
-align-items: right;
-justify-content: top;
-padding-left: 150px;
+.icon {
+  height: 15%;
+  align-items: right;
+  justify-content: top;
+  padding-left: 150px;
 }
 
-.Work{
+.Work {
   background-color: var(--Light-red-work);
 
 }
 
-.Exercise{
+.Exercise {
   background-color: var(--Lime-green);
 
 }
 
-.Play{
+.Play {
   background-color: var(--Soft-blue);
 
 }
 
-.Self{
+.Self {
   background-color: var(--Soft-orange);
 
 }
 
-.Study{
+.Study {
   background-color: var(--Light-red-study);
 
 }
 
-.Social{
+.Social {
   background-color: var(--Violet);
 
 }
-
-

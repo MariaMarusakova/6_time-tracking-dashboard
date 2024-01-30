@@ -11,11 +11,7 @@ import style from './App.css';
 const TimeTracker = (props) => {
   return (
     <>
-      
-
-
-      <div className={"activity-column " + ( props.title || "")}>
-      
+          <div className={"activity-column " + ( props.title || "")}>      
         {
           (() => {
 
