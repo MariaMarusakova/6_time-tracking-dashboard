@@ -1,31 +1,187 @@
+:root {
+  --Blue: hsl(246, 80%, 60%);
+
+  --Light-red-work: hsla(15, 100%, 70%);
+  --Soft-blue: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Soft-orange: hsl(43, 84%, 65%);
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+* {
+  font-family: 'Rubik', serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* styles for desktop devices */
+@media only screen and (min-width: 1440px) {
+  .App {
+    display: flex;
+  }
+
+  body {
+    display: flex;
+  }
+
+  .activities {
+    height: 500px;
+    width: 800px;
+  }
+
+
+  .activity-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .side-bar {
+    display: block;
+    height: 500px;
+    margin: auto;
+    width: 250px;
+    background-color: var(--Violet);
+  }
+}
+
+/* styles for mobile devices */
+@media only screen and (max-width: 375px) {
+
+  .App {
+    display: block;
+  }
+
+  body {
+    display: block;  
+  }
+
+  .activities {
+    height: 50%;
+    width: 70%;
+  }
+  .activity-row {
+    display: block;   
+    height: 100%;
+    width: 100%;
+    margin: 15%;
+
+    justify-content: space-between;
+
+  }
+
+  .side-bar {
+    display: block;
+    height: 50%;
+    margin: 15%;
+    width: 70%;
+    background-color: var(--Violet);
+  }
+}
+
 body {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   font-size: 2rem;
+  color: white;
+  background-color: var(--Very-dark-blue);  
 }
 
-div {
-  max-width: 600px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.activities {
+  text-align: center;
+  margin: 15px;
 }
 
 
-.activities{
-  display: table;
+.activity-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  perspective: 1px;  
+  margin: 15px;
+
+
 }
 
-.activity-type{
-  display: table-row;
+.title{
+  border-radius: 15px 15px 0 0;
+
 }
 
-.activity-detail{
-  display: table-cell;
+.activity-value {
+  background-color: var(--Dark-blue);
+  height: 100%;
+  width: 100%;
+
+}
+
+
+
+.person-info {
+  height: 70%;
+  background: none;
+  margin: auto;
+  padding: 15%;
+
+}
+
+.headshot {
+  height: 50px;
+  margin-top: 15px;
+  width: 50px;
+  margin-left: 0;
+  text-align: left;
+  background: none;
+}
+
+p h2 {
+  background-color: var(--Violet);
+
+}
+
+.weekly{
+  display: none;
+}
+
+.monthly{
+  display: none;
+}
+
+.present{
+  font-size: large;
+}
+
+.title{
+  font-size: medium;
+}
+
+.past{
+  font-size: small;
+
+}
+
+.icon{
+height: 15%;
+align-items: right;
+justify-content: top;
+padding-left: 150px;
+}
+
+.Work{
+  background-color: var(--Light-red-work);
+
 }
 
