@@ -6,7 +6,8 @@ import { ReactComponent as Study } from './images/icon-study.svg';
 import { ReactComponent as Work } from './images/icon-work.svg';
 import { ReactComponent as Social } from './images/icon-social.svg';
 
-const TimeTracker = (props) => {
+export default function TimeTracker(props) {
+
   return (
     <>
       <div className={"activity-column " + (props.title || "")}>
@@ -28,21 +29,56 @@ const TimeTracker = (props) => {
 
           })()
         }
+        <div className="activity-value title">{props.title}  <span style={{ float: "right" }}>... </span></div>
 
-          <div className="activity-value title">{props.title}  <span style={{ float: "right" }}>... </span></div>
 
-          <div className="activity-value present daily">{props.timeframe.daily.current}hrs</div>
-          <div className="activity-value past daily">Last Week - {props.timeframe.daily.current}hrs</div>
+        { /* <div className="activity-value title">{props.title}  <span style={{ float: "right" }}>... </span></div>
+
+          <div className="activity-value present daily active">{props.timeframe.daily.current}hrs</div>
+          <div className="activity-value past daily active">Last Week - {props.timeframe.daily.current}hrs</div>
 
           <div className="activity-value present weekly">{props.timeframe.daily.current}hrs</div>
           <div className="activity-value past weekly">Last Week - {props.timeframe.daily.current}hrs</div>
 
           <div className="activity-value present monthly">{props.timeframe.daily.current}hrs</div>
-          <div className="activity-value past monthly">Last Week - {props.timeframe.daily.current}hrs</div>
+      <div className="activity-value past monthly">Last Week - {props.timeframe.daily.current}hrs</div> */}
 
-        </div>
+
+        {
+          (() => {
+
+            if (props.timeframe === 'daily')
+              return <>
+                <div className="activity-value present daily active">{props.hours.daily.current}hrs</div>
+                <div className="activity-value past daily active">Last Week - {props.hours.daily.previous}hrs</div>
+
+              </>
+
+
+            if (props.timeframe === 'weekly')
+              return <>
+                <div className="activity-value present daily active">{props.hours.weekly.current}hrs</div>
+                <div className="activity-value past daily active">Last Week - {props.hours.weekly.previous}hrs</div>
+
+              </>
+
+
+            if (props.timeframe === 'monthly')
+              return <>
+                <div className="activity-value present daily active">{props.hours.monthly.current}hrs</div>
+                <div className="activity-value past daily active">Last Week - {props.hours.monthly.previous}hrs</div>
+
+              </>
+          }
+
+
+
+          )()
+        }
+
+
+
+      </div>
     </>
   );
 };
-
-export default TimeTracker;

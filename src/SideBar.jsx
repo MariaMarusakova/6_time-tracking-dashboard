@@ -1,7 +1,7 @@
 import React from "react";
 import headshot from './images/image-jeremy.png';
 
-const SideBar = (props) => {
+export default function SideBar({ timeframe, onClick }) {
   return (
 
     <div className="side-bar">
@@ -14,13 +14,12 @@ const SideBar = (props) => {
 
 
       <div className="time-frame">
-        <div className="side daily-side">Daily</div>
-        <div className="side weekly-side">Weekly</div>
-        <div className="side monthly-side">Monthly</div>
+        <div className="side daily-side" onClick={onClick} id="daily">Daily</div>
+        <div className="side weekly-side" onClick={onClick} id="weekly">Weekly</div>
+        <div className="side monthly-side" onClick={onClick} id="monthly">Monthly</div>
       </div>
 
     </div>
   );
 };
 
-export default SideBar;

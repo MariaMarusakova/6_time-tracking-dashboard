@@ -2,16 +2,21 @@ import './App.css';
 import { menuData } from "./data";
 import SideBar from "./SideBar";
 import TimeTracker from "./TimeTracker";
-
-
+import { useState } from "react";
 
 function App() {
+
+
+  const [timeFrame, setTimeframe] = useState("daily");
+  const handleClick = (event) => {
+    setTimeframe(event.currentTarget.id);
+  }
 
   return (
     <div className="App">
 
       <>
-        <SideBar />
+        <SideBar onClick={handleClick} timeframe={timeFrame}/>
       </>
 
       <div className='activities'>
@@ -22,7 +27,8 @@ function App() {
               <TimeTracker
                   key={index}
                   title={data.title} 
-                  timeframe={data.timeframes}/>
+                  timeframe={timeFrame}
+                  hours={data.timeframes}/>
               </>
             );
           })}
@@ -30,7 +36,9 @@ function App() {
       </div>
 
     </div>
+
   );
+
 }
 
 export default App;
