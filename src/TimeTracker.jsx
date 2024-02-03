@@ -31,16 +31,16 @@ const TimeTracker = (props) => {
         }
       
 
-        <div className="activity-value title">{props.title}</div>
+        <div className="activity-value title">{props.title}  <span style={{float:"right"}}>... </span></div>
 
-        <div className="activity-value present daily">{props.timeframe.daily.current} hrs</div>
-        <div className="activity-value past daily">Last Week {props.timeframe.daily.current} hrs</div>
+        <div className="activity-value present daily">{props.timeframe.daily.current}hrs</div>
+        <div className="activity-value past daily">Last Week - {props.timeframe.daily.current}hrs</div>
 
-        <div className="activity-value present weekly">{props.timeframe.daily.current} hrs</div>
-        <div className="activity-value past weekly">Last Week {props.timeframe.daily.current} hrs</div>
+        <div className="activity-value present weekly">{props.timeframe.daily.current}hrs</div>
+        <div className="activity-value past weekly">Last Week - {props.timeframe.daily.current}hrs</div>
 
-        <div className="activity-value present monthly">{props.timeframe.daily.current} hrs</div>
-        <div className="activity-value past monthly">Last Week {props.timeframe.daily.current} hrs</div>
+        <div className="activity-value present monthly">{props.timeframe.daily.current}hrs</div>
+        <div className="activity-value past monthly">Last Week - {props.timeframe.daily.current}hrs</div>
 
       </div>
     </>

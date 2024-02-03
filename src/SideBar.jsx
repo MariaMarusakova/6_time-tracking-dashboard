@@ -14,9 +14,9 @@ const SideBar = (props) => {
 
 
       <div className="time-frame">
-        <div className="daily">daily</div>
-        <div className="weekly">weekly</div>
-        <div className="monthly">monthly</div>
+        <div className="daily-side">daily</div>
+        <div className="weekly-side">weekly</div>
+        <div className="monthly-side">monthly</div>
       </div>
 
     </div>
