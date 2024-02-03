@@ -5,44 +5,42 @@ import { ReactComponent as SelfCare } from './images/icon-self-care.svg';
 import { ReactComponent as Study } from './images/icon-study.svg';
 import { ReactComponent as Work } from './images/icon-work.svg';
 import { ReactComponent as Social } from './images/icon-social.svg';
-import style from './App.css';
-
 
 const TimeTracker = (props) => {
   return (
     <>
-          <div className={"activity-column " + ( props.title || "")}>      
+      <div className={"activity-column " + (props.title || "")}>
+
         {
           (() => {
 
             if (props.title === 'Exercise')
-              return <div className="icon" style={{backgroundColor: "var(--Lime-green)"}}><Exercise /></div>
+              return <div className="icon" style={{ backgroundColor: "var(--Lime-green)" }}><Exercise /></div>
             if (props.title === 'Play')
-            return <div className="icon" style={{backgroundColor: "var(--Soft-blue)"}}><Play /></div>
+              return <div className="icon" style={{ backgroundColor: "var(--Soft-blue)" }}><Play /></div>
             if (props.title === 'Self Care')
-            return <div className="icon" style={{backgroundColor: "var(--Soft-orange)"}}><SelfCare /></div>
+              return <div className="icon" style={{ backgroundColor: "var(--Soft-orange)" }}><SelfCare /></div>
             if (props.title === 'Study')
-            return <div className="icon" style={{backgroundColor: "var(--Light-red-study)"}}><Study /></div>
+              return <div className="icon" style={{ backgroundColor: "var(--Light-red-study)" }}><Study /></div>
             if (props.title === 'Work')
-            return <div className="icon" style={{backgroundColor: "var(--Light-red-work)"}}><Work /></div>
-            else return <div className="icon" style={{backgroundColor: "var(--Violet)"}}><Social /></div>
+              return <div className="icon" style={{ backgroundColor: "var(--Light-red-work)" }}><Work /></div>
+            else return <div className="icon" style={{ backgroundColor: "var(--Violet)" }}><Social /></div>
 
           })()
         }
-      
 
-        <div className="activity-value title">{props.title}  <span style={{float:"right"}}>... </span></div>
+          <div className="activity-value title">{props.title}  <span style={{ float: "right" }}>... </span></div>
 
-        <div className="activity-value present daily">{props.timeframe.daily.current}hrs</div>
-        <div className="activity-value past daily">Last Week - {props.timeframe.daily.current}hrs</div>
+          <div className="activity-value present daily">{props.timeframe.daily.current}hrs</div>
+          <div className="activity-value past daily">Last Week - {props.timeframe.daily.current}hrs</div>
 
-        <div className="activity-value present weekly">{props.timeframe.daily.current}hrs</div>
-        <div className="activity-value past weekly">Last Week - {props.timeframe.daily.current}hrs</div>
+          <div className="activity-value present weekly">{props.timeframe.daily.current}hrs</div>
+          <div className="activity-value past weekly">Last Week - {props.timeframe.daily.current}hrs</div>
 
-        <div className="activity-value present monthly">{props.timeframe.daily.current}hrs</div>
-        <div className="activity-value past monthly">Last Week - {props.timeframe.daily.current}hrs</div>
+          <div className="activity-value present monthly">{props.timeframe.daily.current}hrs</div>
+          <div className="activity-value past monthly">Last Week - {props.timeframe.daily.current}hrs</div>
 
-      </div>
+        </div>
     </>
   );
 };

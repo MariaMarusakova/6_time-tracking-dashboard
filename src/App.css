@@ -110,8 +110,6 @@ body {
   overflow: hidden;
   perspective: 1px;
   margin: 15px;
-
-
 }
 
 .title {
@@ -119,9 +117,14 @@ body {
 
 }
 
+.activity-value:hover{
+  background-color: var(--Desaturated-blue);
+}
+
+
 .activity-value {
   background-color: var(--Dark-blue);
-  height: 100%;
+  height: 55%;
   width: 100%;
   text-align: justify;
   padding-left: 10%;
@@ -141,14 +144,30 @@ body {
 .side-bar {
   border-radius: 15px;
   background-color: var(--Dark-blue);
-
-
 }
 
 .time-frame {
   border-radius: 15px;
   height: 30%;
   padding-left: 15%;
+  font-size: small;
+  padding: auto;
+  margin: auto;
+}
+
+.side{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-weight: 400;
+  color: var(--Desaturated-blue);
+}
+
+.side:hover{
+  color: white;
+}
+
+.daily-side{
+  padding-top: 10%;
 }
 
 .headshot {
