@@ -144,7 +144,7 @@
   }
 
 
-  .daily-side {
+  #daily {
     padding-top: 10%;
   }
 
@@ -382,4 +382,8 @@ p h2 {
 .Social {
   background-color: var(--Violet);
 
+}
+
+.highlight{
+  color: white;
 }
